@@ -79,7 +79,7 @@ export const Hero = () => {
                 <br />
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in animation-delay-200">
-                I’m a data professional with 7+ years of experience building and
+                I’m a data professional with 6+ years of experience building and
                 optimizing data workflows, automation tools, and ML models that
                 support operational decision-making at scale.
               </p>
