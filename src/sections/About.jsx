@@ -19,32 +19,6 @@ const technologies = [
   "React",
 ];
 
-const highlights = [
-  {
-    icon: Code2,
-    title: "Clean Code",
-    description:
-      "Writing maintainable, scalable code that stands the test of time.",
-  },
-  {
-    icon: Rocket,
-    title: "Performance",
-    description:
-      "Optimizing for speed and delivering lightning-fast user experiences.",
-  },
-  {
-    icon: Users,
-    title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Innovation",
-    description:
-      "Staying ahead with the latest technologies and best practices.",
-  },
-];
-
 export const About = () => {
   return (
     <section id="about" className="py-32 relative overflow-hidden">
@@ -68,7 +42,7 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I’m a data professional with 7+ years of experience working with
+                I’m a data professional with 6+ years of experience working with
                 scalable data systems that power operational and strategic
                 decision-making. With experience spanning ETL design, cloud data
                 systems, and predictive modeling, I build end-to-end solutions
@@ -89,14 +63,6 @@ export const About = () => {
                 cloud-native architecture, and scalable data infrastructure.
               </p>
             </div>
-
-            {/* <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
-              <p className="text-lg font-medium italic text-foreground">
-                "My mission is to create digital experiences that are not just
-                functional, but truly delightful — products that users love to
-                use and developers love to maintain."
-              </p>
-            </div> */}
           </div>
 
           {/* Right Column - Technologies */}
@@ -106,7 +72,7 @@ export const About = () => {
                 Technologies I Work With
               </p> */}
               <p className="text-muted-foreground mb-8">
-                Technologies I work with
+                Technologies / Frameworks I work with
               </p>
 
               <div className="grid grid-cols-2 gap-4">
