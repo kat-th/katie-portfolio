@@ -1,41 +1,46 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "Looker Analytics Dashboard",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
-    image: "/projects/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
-    link: "#",
+      "E-commerce sales dashboard tracking item-level performance, revenue trends, and inventory insights across product categories.",
+    embedUrl:
+      "https://lookerstudio.google.com/embed/reporting/5bc07062-f86a-41ed-b6c6-0990abf39cad/page/U8csF",
+    tags: ["Looker", "SQL", "Data Analytics"],
+    link: "https://lookerstudio.google.com/s/hd1e1aUzbzw",
     github: "#",
   },
   {
-    title: "E-Commerce Platform",
+    title: "Google Analytics Dashboard",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    link: "#",
+      "Google Analytics dashboard visualizing traffic sources, user behavior, conversion funnels, and campaign performance metrics.",
+    embedUrl:
+      "https://lookerstudio.google.com/embed/reporting/7ee383af-18a2-4f22-bb0f-708871a704ef/page/CcFRC",
+    tags: ["Google Analytics", "Looker Studio", "Data Visualization"],
+    link: "https://lookerstudio.google.com/s/lPcPs5sntJE",
     github: "#",
   },
   {
-    title: "AI Writing Assistant",
+    title: "A/B Testing - Cookie Cats Mobile Game",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-    image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
-    link: "#",
-    github: "#",
+      "Statistical A/B test analysis on Cookie Cats mobile game data, evaluating the impact of gate placement on player retention using hypothesis testing.",
+    embedUrl:
+      "https://nbviewer.org/github/katiethaoha/AB-testing-with-cookie-cats-mobile-game/blob/master/AB-testing-notebook.ipynb",
+    tags: ["Python", "A/B Testing", "Statistics", "Jupyter"],
+    link: "https://nbviewer.org/github/katiethaoha/AB-testing-with-cookie-cats-mobile-game/blob/master/AB-testing-notebook.ipynb",
+    github:
+      "https://github.com/katiethaoha/AB-testing-with-cookie-cats-mobile-game",
   },
   {
-    title: "Project Management Tool",
+    title: "Cash Flow - Real Estate Investment Analyzer",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
+      "Full-stack web app for evaluating real estate listings with key financial metrics like cash-on-cash return, monthly cash flow, and AI-powered investment recommendations based on user inputs.",
+    embedUrl: "https://cashflowapp-aubf.onrender.com/",
+    tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Docker", "AWS"],
+    link: "https://cashflowapp-aubf.onrender.com/",
+    github: "https://github.com/kat-th/cashflow-app?tab=readme-ov-file",
   },
 ];
 
@@ -72,33 +77,42 @@ export const Projects = () => {
               className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
               style={{ animationDelay: `${(idx + 1) * 100}ms` }}
             >
-              {/* Image */}
+              {/* Image or Embed */}
               <div className="relative overflow-hidden aspect-video">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div
-                  className="absolute inset-0 
-                bg-gradient-to-t from-card via-card/50
-                 to-transparent opacity-60"
-                />
-                {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a
-                    href={project.link}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                  >
-                    <ArrowUpRight className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={project.github}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                  >
-                    <Github className="w-5 h-5" />
-                  </a>
-                </div>
+                {project.embedUrl ? (
+                  <>
+                    <iframe
+                      src={project.embedUrl}
+                      className="w-full h-full border-0"
+                      allowFullScreen
+                      title={project.title}
+                    />
+                  </>
+                ) : (
+                  <>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-card via-card/50 to-transparent opacity-60" />
+                    {/* Overlay Links */}
+                    <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <a
+                        href={project.link}
+                        className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                      >
+                        <ArrowUpRight className="w-5 h-5" />
+                      </a>
+                      <a
+                        href={project.github}
+                        className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                      >
+                        <Github className="w-5 h-5" />
+                      </a>
+                    </div>
+                  </>
+                )}
               </div>
 
               {/* Content */}
@@ -107,12 +121,28 @@ export const Projects = () => {
                   <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <ArrowUpRight
-                    className="w-5 h-5 
-                  text-muted-foreground group-hover:text-primary
-                   group-hover:translate-x-1 
-                   group-hover:-translate-y-1 transition-all"
-                  />
+                  <div className="flex items-center gap-2">
+                    {project.link && project.link !== "#" && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-1.5 rounded-full hover:bg-primary/10 hover:text-primary transition-all"
+                      >
+                        <ArrowUpRight className="w-5 h-5" />
+                      </a>
+                    )}
+                    {project.github && project.github !== "#" && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-1.5 rounded-full hover:bg-primary/10 hover:text-primary transition-all"
+                      >
+                        <Github className="w-5 h-5" />
+                      </a>
+                    )}
+                  </div>
                 </div>
                 <p className="text-muted-foreground text-sm">
                   {project.description}
