@@ -3,7 +3,7 @@ import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
 const projects = [
   {
-    title: "Looker Analytics Dashboard",
+    title: "Ecomm Analytics Dashboard",
     description:
       "E-commerce sales dashboard tracking item-level performance, revenue trends, and inventory insights across product categories.",
     embedUrl:
@@ -23,6 +23,15 @@ const projects = [
     github: "#",
   },
   {
+    title: "Cash Flow - Real Estate Investment Analyzer",
+    description:
+      "Full-stack web app for evaluating real estate listings with key financial metrics like cash-on-cash return, monthly cash flow, and AI-powered investment recommendations based on user inputs.",
+    embedUrl: "https://cashflowapp-aubf.onrender.com/",
+    tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Docker", "AWS"],
+    link: "https://cashflowapp-aubf.onrender.com/",
+    github: "https://github.com/kat-th/cashflow-app?tab=readme-ov-file",
+  },
+  {
     title: "A/B Testing - Cookie Cats Mobile Game",
     description:
       "Statistical A/B test analysis on Cookie Cats mobile game data, evaluating the impact of gate placement on player retention using hypothesis testing.",
@@ -34,14 +43,35 @@ const projects = [
       "https://github.com/katiethaoha/AB-testing-with-cookie-cats-mobile-game",
   },
   {
-    title: "Cash Flow - Real Estate Investment Analyzer",
+    title: "Profitable App Profiles",
     description:
-      "Full-stack web app for evaluating real estate listings with key financial metrics like cash-on-cash return, monthly cash flow, and AI-powered investment recommendations based on user inputs.",
-    embedUrl: "https://cashflowapp-aubf.onrender.com/",
-    tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Docker", "AWS"],
-    link: "https://cashflowapp-aubf.onrender.com/",
-    github: "https://github.com/kat-th/cashflow-app?tab=readme-ov-file",
+      "Data analysis identifying what types of free mobile apps attract the most users on the App Store and Google Play, analyzing 10,000+ Android and 7,000+ iOS apps.",
+    embedUrl:
+      "https://nbviewer.org/github/kat-th/profitable_app_profiles/blob/main/Profitable%20App%20Profiles%20for%20the%20App%20Store%20and%20Google%20Play%20Markets.ipynb",
+    tags: ["Python", "Data Analysis", "Jupyter"],
+    link: "https://nbviewer.org/github/kat-th/profitable_app_profiles/blob/main/Profitable%20App%20Profiles%20for%20the%20App%20Store%20and%20Google%20Play%20Markets.ipynb",
+    github: "https://github.com/kat-th/profitable_app_profiles",
   },
+  {
+    title: "Prosper Loan EDA",
+    description:
+      "Exploratory data analysis of 113,937 Prosper peer-to-peer loan records across 81 variables, uncovering patterns in borrower behavior, credit risk, and loan performance.",
+    embedUrl:
+      "https://nbviewer.org/github/katiethaoha/Rstudio-ProsperLoan-EDA/blob/master/prosperloan.html",
+    tags: ["R", "EDA", "Statistics", "Data Visualization"],
+    link: "https://nbviewer.org/github/katiethaoha/Rstudio-ProsperLoan-EDA/blob/master/prosperloan.html",
+    github: "https://github.com/katiethaoha/Rstudio-ProsperLoan-EDA",
+  },
+  // {
+  //   title: "Boston Crime Incident Report",
+  //   description:
+  //     "Python-based analysis of Boston crime incident data exploring patterns in crime types, locations, time of day, and seasonal trends across city districts.",
+  //   embedUrl:
+  //     "https://nbviewer.org/github/katiethaoha/crime-indicent-report-with-python/blob/master/Crime-incident-report.ipynb",
+  //   tags: ["Python", "Pandas", "Data Analysis", "Jupyter"],
+  //   link: "https://nbviewer.org/github/katiethaoha/crime-indicent-report-with-python/blob/master/Crime-incident-report.ipynb",
+  //   github: "https://github.com/katiethaoha/crime-indicent-report-with-python",
+  // },
 ];
 
 export const Projects = () => {
@@ -70,7 +100,7 @@ export const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {projects.map((project, idx) => (
             <div
               key={idx}
