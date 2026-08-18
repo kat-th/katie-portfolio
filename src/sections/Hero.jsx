@@ -74,14 +74,20 @@ export const Hero = () => {
               <h1 className="text-3xl md:text-6xl lg:text-5xl font-bold leading-tight animate-fade-in animation-delay-100">
                 Hi, I'm Katie Ha <br />
                 <span className="text-primary italic glow-text text-2xl">
-                  Data & Anlytics Engineer
+                  Data Engineer
                 </span>
                 <br />
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in animation-delay-200">
-                I’m a data professional with 6+ years of experience building and
-                optimizing data workflows, automation tools, and ML models that
-                support operational decision-making at scale.
+                I’m a Data Engineer with 6+ years of experience building
+                scalable data pipelines, cloud data platforms, and automation
+                solutions. I specialize in transforming complex, high-volume
+                data into reliable, analytics-ready datasets using{" "}
+                <strong className="font-semibold text-secondary-foreground">
+                  Python, SQL, Databricks, and AWS
+                </strong>
+                , with a focus on data quality, performance, and maintainable
+                architecture.
               </p>
             </div>
 

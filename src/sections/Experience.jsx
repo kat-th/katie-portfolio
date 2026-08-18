@@ -3,15 +3,30 @@ const experiences = [
     period: "2022 — Present",
     role: "Business Intelligence Engineer",
     company: "Amazon",
-    description:
-      "Optimized AWS ETL workflows and Athena workloads supporting 40+ dashboards, reducing latency and improving reliability. Developed production risk and attribution models used across 300 AR buildings for network-level decision-making. Automated reporting processes to scale analytics across the AR network.",
+    description: (
+      <>
+        Designed and optimized scalable{" "}
+        <strong className="font-semibold text-secondary-foreground">
+          AWS data pipelines
+        </strong>{" "}
+        using Glue, Lambda, S3, Athena, Redshift, and Step Functions, processing
+        millions of operational records across 300+ sites. Improved large-scale
+        query performance through partitioning, pre-aggregation, and
+        materialized views, reducing dashboard latency from hours to minutes.
+        Built automated ingestion and transformation frameworks that
+        standardized data across 30+ sites and powered 40+ production
+        dashboards.
+      </>
+    ),
     technologies: [
       "Python",
       "SQL",
-      "AWS (Glue, Lambda, S3)",
-      "QuickSight",
-      "Tableau",
-      "Git",
+      "AWS Glue",
+      "AWS Lambda",
+      "Amazon S3",
+      "Athena",
+      "Redshift",
+      "Step Functions",
     ],
     current: true,
   },

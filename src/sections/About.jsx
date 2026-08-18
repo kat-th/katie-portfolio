@@ -42,25 +42,30 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I’m a data professional with 6+ years of experience working with
-                scalable data systems that power operational and strategic
-                decision-making. With experience spanning ETL design, cloud data
-                systems, and predictive modeling, I build end-to-end solutions
-                that move from raw data to actionable insight.
+                I’m a Data Engineer with 6+ years of experience building
+                scalable data pipelines, cloud data platforms, and automation
+                solutions that power analytics and business-critical
+                decision-making.
               </p>
               <p>
-                My work sits at the intersection of engineering and analytics —
-                translating ambiguous business problems into reliable,
-                production-ready data systems. I’ve built automated migration
-                tools for 40+ dashboards, optimized large-scale Athena
-                workloads, and developed network-wide risk and attribution
-                models supporting 300+ fulfillment centers and multi-million
-                dollar operational initiatives.
+                My work spans{" "}
+                <strong className="font-semibold text-secondary-foreground">
+                  data ingestion, transformation, modeling, orchestration, and
+                  optimization
+                </strong>
+                , with hands-on experience across{" "}
+                <strong className="font-semibold text-secondary-foreground">
+                  Databricks, AWS, Python, SQL, and Delta Lake
+                </strong>
+                . I’ve built pipelines processing 90M+ records, optimized
+                large-scale cloud workloads, and developed data systems
+                supporting 300+ operational sites.
               </p>
               <p>
-                I’m particularly interested in data engineering and analytics
-                engineering roles where I can deepen my impact on system design,
-                cloud-native architecture, and scalable data infrastructure.
+                My background in analytics gives me a strong understanding of
+                how data is consumed downstream, helping me build infrastructure
+                that is not only scalable and reliable, but also practical for
+                real-world analytics.
               </p>
             </div>
           </div>
