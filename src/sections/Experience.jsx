@@ -5,17 +5,15 @@ const experiences = [
     company: "Amazon",
     description: (
       <>
-        Designed and optimized scalable{" "}
+        Designed and optimized{" "}
         <strong className="font-semibold text-secondary-foreground">
           AWS data pipelines
         </strong>{" "}
-        using Glue, Lambda, S3, Athena, Redshift, and Step Functions, processing
-        millions of operational records across 300+ sites. Improved large-scale
-        query performance through partitioning, pre-aggregation, and
-        materialized views, reducing dashboard latency from hours to minutes.
-        Built automated ingestion and transformation frameworks that
-        standardized data across 30+ sites and powered 40+ production
-        dashboards.
+        using Glue, Lambda, S3, Athena, and Redshift, processing millions of
+        records across 300+ sites. Improved query performance through
+        partitioning and pre-aggregation, reducing dashboard latency from hours
+        to minutes. Built automated ingestion and transformation frameworks
+        powering 40+ production dashboards.
       </>
     ),
     technologies: [
@@ -26,7 +24,6 @@ const experiences = [
       "Amazon S3",
       "Athena",
       "Redshift",
-      "Step Functions",
     ],
     current: true,
   },
